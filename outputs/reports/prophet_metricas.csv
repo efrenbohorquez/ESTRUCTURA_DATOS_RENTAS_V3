@@ -1,0 +1,2 @@
+Modelo,Config,Transformacion,Serie,Train,Test,MAPE,RMSE_MM,MAE_MM,Total_2026_MM,Crec_vs_2025,Exogenas,Configs_evaluadas
+Prophet,IPC + Consumo,log1p,Ene 2022 – Dic 2025 (51 meses),48 meses,3 meses,6.3,28.7,19.3,3565.8,3.9,"IPC, Consumo_Hogares",5

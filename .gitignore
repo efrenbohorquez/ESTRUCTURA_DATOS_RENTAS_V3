@@ -1,0 +1,56 @@
+# ══════════════════════════════════════════════════════════════
+# .gitignore — Sistema de Análisis y Pronóstico de Rentas Cedidas
+# ══════════════════════════════════════════════════════════════
+
+# ── Entorno virtual ──
+.venv/
+venv/
+env/
+ENV/
+
+# ── Python bytecode ──
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# ── Jupyter checkpoints ──
+.ipynb_checkpoints/
+
+# ── Archivos de datos grandes (> 5 MB) ──
+# El CSV principal de 42 MB y los Excel intermedios se excluyen.
+# Los CSV procesados pequeños (serie_mensual.csv, forecasts) SÍ se versionan.
+data/processed/rentas_2022_2025.csv
+*.xlsx
+~$*.xlsx
+
+# ── Carpetas de limpieza/recuperación (intermedios) ──
+limpieza/
+recovery/
+recovery_raw/
+
+# ── PDF fuentes externas ──
+bol-IPC-dic2024.pdf
+
+# ── Archivos temporales ──
+temp_mun.txt
+*.tmp
+*.bak
+*.swp
+*~
+
+# ── Modelos serializados grandes ──
+outputs/reports/xgboost_model.json
+
+# ── IDE / Editor ──
+.vscode/
+.idea/
+*.code-workspace
+
+# ── OS ──
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# ── Logs ──
+*.log

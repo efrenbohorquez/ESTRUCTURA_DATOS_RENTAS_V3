@@ -1,0 +1,21 @@
+INFORME DE PRIORIZACION DE RENTAS - MARZO 4
+==================================================
+
+FUENTES CLAVE (Pareto 85%):
+                                        NombreSubGrupoFuente  ValorRecaudo  Percentage  Cumulative
+         Componente Especifico Consumo Cigarrillos y Tabacos  3.181067e+12   24.321352   24.321352
+                           COLJUEGOS para Régimen Subsidiado  2.481353e+12   18.971579   43.292930
+          Impoconsumo Licores, Vinos, Aperitivos y Similares  2.137808e+12   16.344947   59.637877
+Monopolio de Juegos de Suerte y Azar Entidades Territoriales  1.884041e+12   14.404738   74.042615
+
+CONCEPTOS CLAVE (Pareto 80%):
+                                                          NombreConcepto  ValorRecaudo  Percentage  Cumulative
+                    Renta Componente Especifico Cigarrillo y Tabaco Ext.  3.171951e+12   24.251658   24.251658
+                         Componente Ad Valorem Cigarrillos y Tabaco  Ext  1.381343e+12   10.561280   34.812937
+                        Impoconsumo De Cerveza (Iva Del 8% Cerveza) Nal.  1.151765e+12    8.806006   43.618943
+                 Recursos transferidos por Coljuegos- Juegos Localizados  1.005597e+12    7.688452   51.307395
+ Derechos De Explotación De Juego De Apuestas Permanentes O Chance Dptal  9.082206e+11    6.943945   58.251340
+                         Juegos Novedosos (JUEGOS OPERADOS POR INTERNET)  9.044980e+11    6.915483   65.166823
+              LICORES Y ALCOHOL (Licores Vinos Aperitivos Similares) Nal  6.632253e+11    5.070795   70.237617
+              LICORES Y ALCOHOL (Licores Vinos Aperitivos Similares) Ext  5.463053e+11    4.176864   74.414481
+Otros Recursos Departamentales y Distritales destinados al Aseguramiento  4.655988e+11    3.559809   77.974291

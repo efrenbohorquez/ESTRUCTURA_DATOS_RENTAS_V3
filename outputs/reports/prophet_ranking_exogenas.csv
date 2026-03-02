@@ -1,0 +1,13 @@
+Rank,Config,Exogenas,MAPE,RMSE_MM,MAE_MM,Delta_MAPE
+1,Baseline (sin exógenas),Ninguna,8.47,36.7,25.7,0.0
+2,+ Salario_Minimo,Salario_Minimo,8.7,36.7,26.1,0.23
+3,+ UPC,UPC,8.88,37.9,26.7,0.41
+4,+ Consumo_Hogares,Consumo_Hogares,9.07,38.9,27.1,0.6
+5,+ Salario_Minimo + Consumo_Hogares,Salario_Minimo + Consumo_Hogares,11.18,34.2,31.8,2.71
+6,+ Salario_Minimo + UPC,Salario_Minimo + UPC,11.2,34.2,31.9,2.73
+7,+ IPC + Consumo_Hogares,IPC + Consumo_Hogares,11.21,34.2,31.9,2.75
+8,+ IPC + Salario_Minimo,IPC + Salario_Minimo,11.22,34.2,31.9,2.75
+9,+ IPC + UPC,IPC + UPC,11.22,34.2,31.9,2.75
+10,+ IPC,IPC,11.67,35.6,33.2,3.2
+11,+ UPC + Consumo_Hogares,UPC + Consumo_Hogares,11.9,35.0,33.5,3.43
+12,+ Todas (4 vars),"IPC, Salario_Minimo, UPC, Consumo_Hogares",11.97,35.1,33.7,3.5

@@ -1,0 +1,6 @@
+Modelo,Tipo,Interpretabilidad,Incorpora Exógenas,Requiere Datos,Complejidad,Reproducibilidad
+SARIMA,Econométrico,⭐⭐⭐⭐⭐,No,Baja (≥24 obs),Baja,Alta
+SARIMAX,Econométrico+,⭐⭐⭐⭐,"Sí (IPC, SM, UPC)",Media (≥36 obs),Media,Alta
+Prophet,ML (Meta),⭐⭐⭐⭐,Parcial (holidays),Baja (≥24 obs),Baja,Alta
+XGBoost,Gradient Boosting,⭐⭐⭐ (SHAP),Sí (todas),Alta (≥60 obs),Alta,Media (seed)
+LSTM,Deep Learning,⭐,No (univariado),Alta (≥60 obs),Muy Alta,Baja (estocástico)
