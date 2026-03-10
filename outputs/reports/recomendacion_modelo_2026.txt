@@ -8,7 +8,7 @@ RMSE:               $15.4MM COP
 MAE:                $13.8MM COP
 Score ponderado:    8.13
 
-Fecha de generacion: 2026-03-10 00:34
+Fecha de generacion: 2026-03-10 06:16
 
 Matriz Completa:
  Modelo  MAPE_Mensual_%  RMSE_MM  MAE_MM  Error_Trim_%  Forma_2de2  Sesgo_MM Parsimonia  Score_Ponderado
