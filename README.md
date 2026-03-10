@@ -1,4 +1,4 @@
-# Sistema de Análisis y Pronóstico de Rentas Cedidas
+﻿# Sistema de Análisis y Pronóstico de Rentas Cedidas
 
 [![Python 3.11](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -147,7 +147,7 @@ python scripts/build_09_comparacion.py    # Genera 09_Comparacion_Modelos.ipynb
 
 | Atributo | Valor |
 |----------|-------|
-| **Fuente** | BaseRentasVF_limpieza21feb_sin2021_ene_sep (ADRES) |
+| **Fuente** | BaseRentasCedidasVF (ADRES) |
 | **Registros** | 149,648 transacciones |
 | **Periodo** | Octubre 2021 – Diciembre 2025 |
 | **Frecuencia** | Mensual (51 observaciones) |

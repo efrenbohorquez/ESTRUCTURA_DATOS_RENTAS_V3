@@ -1,4 +1,4 @@
-import pandas as pd
+﻿import pandas as pd
 from pathlib import Path
 import sys
 
@@ -10,7 +10,7 @@ from utils import cargar_datos, formato_pesos
 print("Analizando priorizacion de rentas (Pareto)...")
 
 # Definir ruta directa para evitar fallos de config
-data_path = _project_root / "BaseRentasVF_limpieza21feb_sin2021_ene_sep.xlsx"
+data_path = _project_root / "BaseRentasCedidasVF.xlsx"
 df = cargar_datos(ruta=data_path)
 
 def pareto_analysis(df, column):

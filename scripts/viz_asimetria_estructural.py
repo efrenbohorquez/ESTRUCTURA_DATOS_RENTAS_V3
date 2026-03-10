@@ -1,4 +1,4 @@
-import pandas as pd
+﻿import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from pathlib import Path
@@ -28,7 +28,7 @@ except Exception as e:
     C_PRIMARY = '#1B2A4A'
     C_SECONDARY = '#C0392B'
     OUTPUTS_FIGURES = Path.cwd() / "outputs" / "figures"
-    DATA_FILE = Path.cwd() / "BaseRentasVF_limpieza21feb_sin2021_ene_sep.xlsx"
+    DATA_FILE = Path.cwd() / "BaseRentasCedidasVF.xlsx"
     PROJECT_ROOT = Path.cwd()
     PROYECTO_ENTIDAD = "Departamentos de Colombia"
 
