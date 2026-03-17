@@ -184,7 +184,7 @@ python scripts/build_09_comparacion.py    # Genera 09_Comparacion_Modelos.ipynb
    contextos de datos escasos con estacionalidad fuerte.
 3. **LSTM** confirma la hipótesis de escasez de datos (n < 48) — las redes
    neuronales requieren volúmenes superiores para superar modelos clásicos.
-4. El **"Electrocardiograma Fiscal"** demuestra que el recaudo es un proceso
+4. El **"Gráfico Comparativo de Curvas de Pronóstico"** demuestra que el recaudo es un proceso
    altamente predecible: los cinco paradigmas convergen en la forma de la curva.
 
 ---
