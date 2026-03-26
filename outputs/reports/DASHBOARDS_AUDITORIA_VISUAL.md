@@ -40,7 +40,6 @@
 ║  XGBoost ★   5.05%   $15.4MM   $13.8MM    4.99%    8.13   ✅ USAR     ║
 ║  Prophet     6.30%   $28.7MM   $19.3MM    5.03%   14.51   🟡 APOYO    ║
 ║  SARIMAX    13.99%   $42.5MM   $39.6MM    2.46%   17.09   ⚠️ RESPALDO ║
-║  SARIMA     13.99%   $42.5MM   $39.6MM    2.46%   17.09   ⚠️ RESPALDO ║
 ║  LSTM       23.52%   $73.5MM   $59.6MM   21.60%   44.80   ❌ ELIMINAR ║
 ║                                                                        ║
 ║  Métricas en dataset prueba: Oct-Dic 2025 (Out-of-Sample)           ║
@@ -355,7 +354,7 @@
 ║  🤖 MODELOS PREDICTIVOS           ✅ OK      92%      ← 5 validados│  ║
 ║    ├─ XGBoost (GANADOR)           ✅ OK      98%      ← MAPE 5.05% │  ║
 ║    ├─ Prophet (Alternativa)       ✅ OK      95%      ← MAPE 6.30% │  ║
-║    ├─ SARIMAX/SARIMA              ✅ OK      90%      ← Respaldo   │  ║
+║    ├─ SARIMAX              ✅ OK      90%      ← Respaldo   │  ║
 ║    └─ LSTM (Eliminar)             ❌ NO      0%       ← Inefectivo │  ║
 ║                                                                     │  ║
 ║  📚 DOCUMENTACIÓN                 ✅ OK      97%      ← 47 artefact│  ║

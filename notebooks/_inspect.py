@@ -6,5 +6,5 @@ print("Total cells:", total)
 for i, c in enumerate(nb['cells']):
     ct = c['cell_type']
     src = ''.join(c['source'])
-    line1 = src.split('\n')[0][:100]
+    line1 = src.split('\n', maxsplit=1)[0][:100]
     print(f"  Cell {i} [{ct}]: {line1}")

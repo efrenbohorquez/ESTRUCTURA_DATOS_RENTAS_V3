@@ -356,7 +356,7 @@ Consumo Hogares    −0.71 ↗       0.35 →       −0.45 →       1.00
 
 ## 7. NOTA METODOLÓGICA
 
-Los valores contenidos en este informe alimentan el diccionario `MACRO_DATA` del módulo de configuración central (`notebooks/00_config.py`), utilizado por los nueve notebooks del pipeline predictivo del proyecto STAR (Sistema de Tracking y Análisis de Rentas). La consistencia de estos valores es **crítica** para la credibilidad de las proyecciones generadas por los modelos SARIMA, SARIMAX, Prophet, XGBoost, LSTM y el Ensemble final.
+Los valores contenidos en este informe alimentan el diccionario `MACRO_DATA` del módulo de configuración central (`notebooks/00_config.py`), utilizado por los nueve notebooks del pipeline predictivo del proyecto STAR (Sistema de Tracking y Análisis de Rentas). La consistencia de estos valores es **crítica** para la credibilidad de las proyecciones generadas por los modelos SARIMAX, Prophet, XGBoost, LSTM y el Ensemble final.
 
 Cualquier actualización de estos indicadores debe:
 1. Verificarse contra la fuente primaria oficial.

@@ -1,4 +1,7 @@
-﻿"""
+﻿# pyright: reportUnusedImport=false
+# pylint: disable=unused-import,invalid-name
+# ruff: noqa: F401
+"""
 00_config.py — Configuración Centralizada del Sistema de Análisis de Rentas Cedidas
 ====================================================================================
 Importar en cada notebook con:
@@ -35,7 +38,7 @@ for _d in [DATA_RAW, DATA_PROCESSED, OUTPUTS_FIGURES, OUTPUTS_FORECASTS, OUTPUTS
     _d.mkdir(parents=True, exist_ok=True)
 
 # Archivo fuente de datos principal (ruta definitiva confirmada)
-DATA_FILE = PROJECT_ROOT / "BaseRentasCedidasVF.xlsx"
+DATA_FILE = DATA_RAW / "BaseRentasCedidasVF.xlsx"
 
 # Años a incluir en el análisis
 ANOS_ANALISIS = [2021, 2022, 2023, 2024, 2025]
@@ -136,32 +139,7 @@ if _scripts_dir not in sys.path:
 
 _VIZ_THEME_LOADED = False
 try:
-    from viz_theme import (
-        # Constantes de tipografía
-        FONT_FAMILY, FONT_TITLE, FONT_SUBTITLE, FONT_AXIS, FONT_TICK,
-        FONT_LEGEND, FONT_ANNOTATION, FONT_WATERMARK,
-        # Colores principales
-        C_PRIMARY, C_SECONDARY, C_TERTIARY, C_QUATERNARY,
-        C_QUINARY, C_SENARY, C_SEPTENARY,
-        # Colores de soporte
-        C_GRID, C_BACKGROUND, C_TEXT, C_TEXT_LIGHT, C_HIGHLIGHT,
-        C_CI_FILL, C_CI_BORDER, C_POSITIVE, C_NEGATIVE,
-        C_TRAIN, C_TEST, C_BAR_PEAK, C_BAR_NORMAL, C_BAR_VALLEY,
-        # Diccionario de colores por modelo
-        COLORES_MODELOS, PALETTE_SEQUENTIAL, PALETTE_DIVERGING,
-        # Dimensiones
-        FIGSIZE_FULL, FIGSIZE_WIDE, FIGSIZE_STANDARD, FIGSIZE_DUAL,
-        FIGSIZE_QUAD, FIGSIZE_SMALL, FIGSIZE_SQUARE,
-        # Funciones
-        aplicar_tema_profesional, formato_pesos, formato_pesos_eje,
-        formato_porcentaje, titulo_profesional, marca_agua,
-        anotar_pico, linea_media, zona_train_test, leyenda_profesional,
-        guardar_figura,
-        # Gráficas prediseñadas
-        grafica_serie_tiempo, grafica_barras_estacional, grafica_residuos,
-        grafica_pronostico, grafica_comparacion_modelos, tabla_metricas,
-        grafica_radar,
-    )
+    from viz_theme import *  # noqa: F403 — re-exporta todo para notebooks vía %run
     _VIZ_THEME_LOADED = True
 except ImportError as e:
     print(f'  ⚠️ viz_theme.py no cargado: {e} — usando tema básico')
@@ -172,11 +150,11 @@ except ImportError as e:
     FIGSIZE_STANDARD = (14, 6); FIGSIZE_WIDE = (16, 6)
     FIGSIZE_FULL = (14, 7); FIGSIZE_QUAD = (16, 12); FIGSIZE_SMALL = (8, 5)
     COLORES_MODELOS = {
-        'real': C_PRIMARY, 'sarima': C_SECONDARY, 'sarimax': C_TERTIARY,
+        'real': C_PRIMARY, 'sarimax': C_TERTIARY,
         'prophet': C_QUATERNARY, 'xgboost': C_QUINARY, 'lstm': C_SENARY,
         'ensemble': C_SEPTENARY, 'ci': C_CI_FILL,
     }
-    def formato_pesos(valor, pos=None):
+    def formato_pesos(valor, _pos=None):
         if abs(valor) >= 1e9: return f'${valor/1e9:,.0f}MM'
         elif abs(valor) >= 1e6: return f'${valor/1e6:,.0f}M'
         return f'${valor:,.0f}'
@@ -187,7 +165,7 @@ except ImportError as e:
 
 # Alias de compatibilidad (funciona con o sin viz_theme)
 COLORES = {
-    'real': C_PRIMARY, 'sarima': C_SECONDARY, 'sarimax': C_TERTIARY,
+    'real': C_PRIMARY, 'sarimax': C_TERTIARY,
     'prophet': C_QUATERNARY, 'xgboost': C_QUINARY, 'lstm': C_SENARY,
     'ensemble': C_SEPTENARY, 'ci': C_CI_FILL,
 }
@@ -241,4 +219,4 @@ PROYECTO_PERIODO = f"{FECHA_INICIO} a {FECHA_FIN}"
 
 print(f"Config cargada -- Datos: {DATA_FILE.name} | Periodo: {PROYECTO_PERIODO}")
 if _VIZ_THEME_LOADED:
-    print(f"  Tema profesional activo -- DPI 300, tipografia serif, paleta academica")
+    print("  Tema profesional activo -- DPI 300, tipografia serif, paleta academica")

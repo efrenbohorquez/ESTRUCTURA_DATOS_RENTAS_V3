@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from utils import cargar_datos, agregar_mensual, calcular_metricas
 
 def entrenar_predict_sarima(y, order, seasonal_order, steps=12):
-    """Ajusta y predice con SARIMA."""
+    """Ajusta y predice con SARIMAX."""
     model = SARIMAX(y, order=order, seasonal_order=seasonal_order, 
                     enforce_stationarity=False, enforce_invertibility=False)
     results = model.fit(disp=False)

@@ -528,7 +528,7 @@ plt.show()
 md(r"""### 3.3  Funciones de autocorrelación (ACF / PACF)
 
 Los correlogramas permiten identificar la **estructura de dependencia temporal** 
-de la serie, fundamental para parametrizar modelos ARIMA/SARIMA:
+de la serie, fundamental para parametrizar modelos ARIMA/SARIMAX:
 
 - **ACF** → patrones de decaimiento indican el orden MA ($q$) y la estacionalidad.
   Picos significativos en lags múltiplos de 12 confirman estacionalidad anual.
@@ -1028,11 +1028,11 @@ md(r"""---
 
 4. **Estacionariedad.** Las pruebas ADF y KPSS proporcionan el diagnóstico
    combinado de estacionariedad. Si la serie es no estacionaria, se requerirá
-   al menos una diferenciación ($d \geq 1$) para los modelos ARIMA/SARIMA.
+   al menos una diferenciación ($d \geq 1$) para los modelos ARIMA/SARIMAX.
 
 5. **Autocorrelación.** Los correlogramas ACF/PACF revelan la estructura de
    dependencia temporal que parametrizará los órdenes $(p, d, q)(P, D, Q)_{12}$
-   de los modelos SARIMA. Picos en lag 12 confirman la componente estacional.
+   de los modelos SARIMAX. Picos en lag 12 confirman la componente estacional.
 
 6. **Distribución.** Las pruebas de normalidad (Jarque-Bera, Shapiro-Wilk)
    determinan si se requieren transformaciones (log, Box-Cox) antes del modelado.
@@ -1049,16 +1049,16 @@ md(r"""---
 
 | Hallazgo | Modelo favorecido |
 |----------|-------------------|
-| Estacionalidad fuerte (s=12) | SARIMA, Prophet |
-| Tendencia + estacionalidad | SARIMA con $(D=1)$, Prophet (piecewise linear) |
+| Estacionalidad fuerte (s=12) | SARIMAX, Prophet |
+| Tendencia + estacionalidad | SARIMAX con $(D=1)$, Prophet (piecewise linear) |
 | Correlación con macro | SARIMAX, XGBoost |
 | Posibles no-linealidades | XGBoost, LSTM |
-| Serie corta (51 obs) | SARIMA, Prophet (robustos con pocas observaciones) |
+| Serie corta (51 obs) | SARIMAX, Prophet (robustos con pocas observaciones) |
 
 ### Próximos pasos
 → **Notebook 02:** Análisis formal de estacionalidad (periodograma, test de Canova-Hansen).  
 → **Notebook 03:** Correlación cruzada con variables macroeconómicas.  
-→ **Notebook 04:** Modelado SARIMA con selección automática de órdenes.
+→ **Notebook 04:** Modelado SARIMAX con selección automática de órdenes.
 """)
 
 # ════════════════════════════════════════════════════════════════

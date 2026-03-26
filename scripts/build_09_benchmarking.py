@@ -1000,7 +1000,7 @@ Un lag-12 debil indica:
 
 - Recaudo erratico sin estacionalidad predecible
 - Posible fraude, evasion o cambio estructural
-- Dificultad para pronosticar con modelos SARIMA/Prophet
+- Dificultad para pronosticar con modelos SARIMAX/Prophet
 
 ### Hipotesis del Mes Vencido
 

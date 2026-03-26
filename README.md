@@ -170,7 +170,6 @@ python scripts/build_08_comparacion.py    # Genera 08_Comparacion_Modelos.ipynb
 |--------|----------|---------------|---------------|-----------------|
 | **XGBoost** | **5.05** | **15.4** | **13.8** | **4.99** |
 | Prophet | 6.30 | 28.7 | 19.3 | 5.03 |
-| SARIMA | 13.99 | 42.5 | 39.6 | 2.69 |
 | SARIMAX | 13.99 | 42.5 | 39.6 | 2.69 |
 | LSTM | 23.52 | 73.5 | 59.6 | 21.54 |
 
@@ -183,7 +182,7 @@ python scripts/build_08_comparacion.py    # Genera 08_Comparacion_Modelos.ipynb
 3. **LSTM** confirma la hipótesis de escasez de datos (n < 48) — las redes
    neuronales requieren volúmenes superiores para superar modelos clásicos.
 4. El **"Gráfico Comparativo de Curvas de Pronóstico"** demuestra que el recaudo es un proceso
-   altamente predecible: los cinco paradigmas convergen en la forma de la curva.
+   altamente predecible: los cuatro modelos convergen en la forma de la curva.
 
 ---
 

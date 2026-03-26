@@ -512,7 +512,7 @@ Los valores de IPC para 2026 se toman del carry-forward del último dato real
 
 Se reportan IC al 95%, que reflejan la incertidumbre del modelo.
 El ancho del intervalo crece con el horizonte, lo que es una propiedad
-natural de los modelos SARIMA.
+natural de los modelos SARIMAX.
 """)
 
 

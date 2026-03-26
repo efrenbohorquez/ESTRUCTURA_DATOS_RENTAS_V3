@@ -92,7 +92,7 @@ Amplitud pico-valle por año:
 
 | Modelo | Recomendación | Justificación |
 |--------|--------------|---------------|
-| **SARIMA** | Usar `s=12` con `D=1` | Diferenciación estacional anual captura el ciclo completo |
+| **SARIMAX** | Usar `s=12` con `D=1` | Diferenciación estacional anual captura el ciclo completo |
 | **SARIMAX** | Añadir variable dummy `mes_pico` (Ene=1, Jul=1) | Refuerza los picos como efecto exógeno |
 | **Prophet** | Configurar `seasonality_mode='multiplicative'` | La amplitud crece con el nivel → estacionalidad multiplicativa, NO aditiva |
 | **XGBoost** | Crear features: `mes_sin`, `mes_cos`, `es_enero`, `es_julio` | Captura el ciclo + los picos explícitamente |

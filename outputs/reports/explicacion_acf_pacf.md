@@ -76,9 +76,9 @@
 
 ---
 
-## 4. Diagnóstico para Modelado SARIMA
+## 4. Diagnóstico para Modelado SARIMAX
 
-De los 4 paneles se extraen los **órdenes del modelo SARIMA(p,d,q)(P,D,Q)[s]**:
+De los 4 paneles se extraen los **órdenes del modelo SARIMAX(p,d,q)(P,D,Q)[s]**:
 
 ### 4.1 Componente no estacional (p, d, q)
 
@@ -100,7 +100,7 @@ De los 4 paneles se extraen los **órdenes del modelo SARIMA(p,d,q)(P,D,Q)[s]**:
 ### 4.3 Modelo inicial recomendado
 
 ```
-SARIMA(1,1,1)(1,1,1)[12]
+SARIMAX(1,1,1)(1,1,1)[12]
 ```
 
 > Este es el modelo "airline" clásico de Box-Jenkins, punto de partida más utilizado en series con estacionalidad mensual. Se debe validar con auto_arima y criterios AIC/BIC.
@@ -115,7 +115,7 @@ SARIMA(1,1,1)(1,1,1)[12]
 |---------------|---------------|
 | Usar `auto_arima` de `pmdarima` para búsqueda automática | Confirma o mejora la identificación visual ACF/PACF |
 | Reportar **AIC, BIC y HQIC** del modelo seleccionado | Estándar académico para comparación de modelos |
-| Comparar SARIMA(1,1,1)(1,1,1)[12] vs variantes | Probar (2,1,1)(1,1,1)[12] y (1,1,2)(1,1,1)[12] como alternativas |
+| Comparar SARIMAX(1,1,1)(1,1,1)[12] vs variantes | Probar (2,1,1)(1,1,1)[12] y (1,1,2)(1,1,1)[12] como alternativas |
 
 ### 5.2 Sobre la estacionalidad dual
 
@@ -123,11 +123,11 @@ SARIMA(1,1,1)(1,1,1)[12]
 |----------|-----------|
 | Ciclo s=6 visible en ACF (lag 6 significativo) | Considerar modelo con **s=6** además de s=12 |
 | Pero s=12 es más fuerte (lag 12 > lag 6) | El modelo principal debe usar **s=12** |
-| Alternativa: SARIMA con s=12 + dummy semestral | Captura ambos ciclos sin duplicar estacionalidad |
+| Alternativa: SARIMAX con s=12 + dummy semestral | Captura ambos ciclos sin duplicar estacionalidad |
 
 ### 5.3 Sobre los diagnósticos post-modelo
 
-Después de ajustar el SARIMA, verificar que los **residuos** cumplan:
+Después de ajustar el SARIMAX, verificar que los **residuos** cumplan:
 
 | Prueba | Criterio de éxito | Herramienta |
 |--------|-------------------|-------------|
@@ -141,7 +141,7 @@ Después de ajustar el SARIMA, verificar que los **residuos** cumplan:
 > [!TIP]
 > **Texto sugerido para la sección de metodología:**
 >
-> "El análisis de las funciones de autocorrelación (ACF) y autocorrelación parcial (PACF) reveló un patrón estacional dominante con periodo s=12, evidenciado por picos significativos en los rezagos 6 y 12 de la ACF a nivel (r₆ ≈ 0.50, r₁₂ ≈ 0.60). La persistencia de estos picos tras la primera diferencia regular (d=1) confirmó la necesidad de diferenciación estacional (D=1). El corte abrupto en el lag 1 de la PACF diferenciada (φ₁ ≈ -0.55) sugirió un componente autorregresivo AR(1), mientras que el comportamiento análogo en la ACF indicó un componente de media móvil MA(1). El modelo inicial identificado fue SARIMA(1,1,1)(1,1,1)[12], posteriormente validado mediante búsqueda automática con el criterio AIC."
+> "El análisis de las funciones de autocorrelación (ACF) y autocorrelación parcial (PACF) reveló un patrón estacional dominante con periodo s=12, evidenciado por picos significativos en los rezagos 6 y 12 de la ACF a nivel (r₆ ≈ 0.50, r₁₂ ≈ 0.60). La persistencia de estos picos tras la primera diferencia regular (d=1) confirmó la necesidad de diferenciación estacional (D=1). El corte abrupto en el lag 1 de la PACF diferenciada (φ₁ ≈ -0.55) sugirió un componente autorregresivo AR(1), mientras que el comportamiento análogo en la ACF indicó un componente de media móvil MA(1). El modelo inicial identificado fue SARIMAX(1,1,1)(1,1,1)[12], posteriormente validado mediante búsqueda automática con el criterio AIC."
 
 ---
 
@@ -164,5 +164,5 @@ Serie Original
          │
          └── ACF lag 12 corte → Q = 1
               │
-              └── SARIMA(1,1,1)(1,1,1)[12] ✓
+              └── SARIMAX(1,1,1)(1,1,1)[12] ✓
 ```

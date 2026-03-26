@@ -15,7 +15,8 @@ notebooks_to_run = [
     "05_Prophet.ipynb",
     "06_XGBoost.ipynb",
     "07_LSTM.ipynb",
-    "08_Comparacion_Modelos.ipynb"
+    "08_Comparacion_Modelos.ipynb",
+    "09_Benchmarking_Territorial.ipynb",
 ]
 
 def run_notebook(nb_name):

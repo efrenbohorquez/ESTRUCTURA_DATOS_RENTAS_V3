@@ -143,7 +143,6 @@ Modelo           MAPE    Recomendación
 XGBoost          5.05%   ✅ USAR EN PROD
 Prophet          6.30%   ✅ ALTERNATIVA
 SARIMAX         13.99%   ⚠️ RESPALDO
-SARIMA          13.99%   ⚠️ RESPALDO
 LSTM            23.52%   ❌ ELIMINAR
 ```
 
@@ -295,7 +294,7 @@ notebooks/
 ### Modelos Evaluados
 1. **Chen & Guestrin (2016)** - XGBoost ✅
 2. **Taylor & Letham (2018)** - Prophet ✅
-3. **Box & Jenkins (1970)** - SARIMA/SARIMAX ✅
+3. **Box & Jenkins (1970)** - SARIMAX ✅
 4. **Hochreiter & Schmidhuber (1997)** - LSTM ✅
 
 ### Fuentes de Datos

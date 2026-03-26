@@ -75,7 +75,6 @@ Dataset Modelado (25 características + lags)
 | 🥇 | **XGBoost** | **5.05%** | 15.4 | 13.8 | **4.99%** | -13.8 | ✅ **ÓPTIMO** |
 | 🥈 | Prophet | 6.30% | 28.7 | 19.3 | 5.03% | -13.9 | ✅ Muy Bueno |
 | 🥉 | SARIMAX | 13.99% | 42.5 | 39.6 | 2.46% | -6.8 | ⚠️ Limitado |
-| — | SARIMA | 13.99% | 42.5 | 39.6 | 2.46% | -6.8 | ⚠️ Limitado |
 | — | LSTM | 23.52% | 73.5 | 59.6 | 21.60% | 59.6 | ❌ Inefectivo |
 
 **Score Ponderado (Metodología):**
@@ -199,12 +198,11 @@ outputs/reports/
 │   └─ informe_benchmarking_territorial.md ✅ Presente (4.5 KB)
 │
 ├── Métricas Comparativas (CSVs)
-│   ├─ comparacion_modelos.csv            ✅ 5 modelos registrados
+│   ├─ comparacion_modelos.csv            ✅ 4 modelos registrados
 │   ├─ xgboost_metricas.csv              ✅ Config + params
 │   ├─ prophet_metricas.csv              ✅ Config + params
 │   ├─ lstm_metricas.csv                 ✅ Config + params
 │   ├─ sarimax_metricas.csv              ✅ Config + params
-│   ├─ sarima_metricas.csv               ✅ Config + params
 │   └─ xgboost_feature_importance.csv    ✅ 10 features con gain %
 │
 ├── Reportes Temáticos
@@ -342,7 +340,7 @@ outputs/reports/
    - Recomendación: Ingresrar Excel con hashsum o documentar linaje completamente
 
 4. **Validación Cruzada Limitada en SARIMAX:**
-   - SARIMAX y SARIMA = MAPE idéntico 13.99% (variable exógena no contribuyó)
+   - SARIMAX MAPE 13.99% — variable exógena IPC no mejoró significativamente el error
    - Sugerencia: Investigación adicional sobre especificación de regresores
 
 #### 7.3 Riesgos Residuales

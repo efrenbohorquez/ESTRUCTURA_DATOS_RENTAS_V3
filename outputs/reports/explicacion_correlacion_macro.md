@@ -74,8 +74,8 @@ Las variables macro (IPC, Salario, UPC) muestran correlaciones **débiles** con 
 
 ## 4. Implicaciones para los Modelos de Pronóstico
 
-### Modelo SARIMA (Notebook 04)
-- ✅ La alta autocorrelación (lag_12 = 0.875) confirma que **SARIMA es apropiado** como modelo base.
+### Modelo SARIMAX (Notebook 04)
+- ✅ La alta autocorrelación (lag_12 = 0.875) confirma que **SARIMAX es apropiado** como modelo base.
 - El componente estacional (s=12) capturará la mayor parte de la varianza explicada.
 
 ### Modelo SARIMAX (Notebook 05)
@@ -109,7 +109,7 @@ Las variables macro (IPC, Salario, UPC) muestran correlaciones **débiles** con 
 
 | Relación | r | Fuerza | Implicación para Modelos |
 |---|---|---|---|
-| Recaudo ↔ lag_12 | 0.875 | Fuerte | SARIMA como modelo base |
+| Recaudo ↔ lag_12 | 0.875 | Fuerte | SARIMAX como modelo base |
 | Recaudo ↔ YoY | 0.430 | Moderada | Feature en XGBoost/LSTM |
 | Recaudo ↔ IEP | 0.370 | Moderada | Indicador KPI financiero |
 | Recaudo ↔ IPC | −0.188 | Débil | Efecto diferido, usar con rezago |
@@ -120,7 +120,7 @@ Las variables macro (IPC, Salario, UPC) muestran correlaciones **débiles** con 
 
 > [!IMPORTANT]
 > La matriz de correlación demuestra que el **principal predictor del recaudo** es su propia historia (lag-12), no las variables macroeconómicas contemporáneas. Esto tiene dos implicaciones:
-> 1. Los modelos puramente estacionales (SARIMA) tendrán buen desempeño base.
+> 1. Los modelos estacionales con exógenas (SARIMAX) tendrán buen desempeño base.
 > 2. El valor añadido de variables exógenas (SARIMAX, Prophet) provendrá de **capturar efectos diferidos** y **shocks** que la estacionalidad sola no explica.
 
 ---
@@ -142,7 +142,7 @@ Los **scatter plots** con línea de regresión lineal muestran la relación biva
 - **Dispersión creciente**: a medida que el recaudo crece, la varianza también aumenta → señal de **heterocedasticidad** que justifica el uso de transformación logarítmica o modelos multiplicativos.
 
 > [!TIP]
-> Este panel confirma que la **estacionalidad anual es el principal driver** del recaudo. Un modelo SARIMA(p,d,q)(P,D,Q)[12] capturará la mayor parte de esta relación.
+> Este panel confirma que la **estacionalidad anual es el principal driver** del recaudo. Un modelo SARIMAX(p,d,q)(P,D,Q)[12] capturará la mayor parte de esta relación.
 
 ---
 
@@ -294,7 +294,7 @@ El análisis correlacional revela que las **variables macroeconómicas contempor
 
 3. **Multicolinealidad exógena**: Salario Mínimo y UPC (r = 0.903) no pueden usarse simultáneamente como regresores. Se recomienda usar solo UPC como la variable más relevante para el sector salud.
 
-Estas conclusiones fundamentan la decisión de utilizar modelos **estacionales puros** (SARIMA) como línea base, complementados con modelos que incorporen variables exógenas rezagadas (SARIMAX con UPC lag-12) y modelos de machine learning (XGBoost) que capturen relaciones no lineales.
+Estas conclusiones fundamentan la decisión de utilizar modelos **estacionales con exógenas** (SARIMAX) como línea base, complementados con modelos que incorporen variables exógenas rezagadas (SARIMAX con UPC lag-12) y modelos de machine learning (XGBoost) que capturen relaciones no lineales.
 
 ---
 

@@ -144,7 +144,7 @@ def generate_pdf():
                 val_str = str(val)
             pdf.cell(0, 10, f"- {col}: {val_str}", new_x="LMARGIN", new_y="NEXT")
         pdf.ln(5)
-        pdf.chapter_body("Estas métricas permiten comparar la precisión de Prophet frente a otros modelos como SARIMA. Un MAPE bajo indica una alta fidelidad en la proyección porcentual del recaudo.")
+        pdf.chapter_body("Estas métricas permiten comparar la precisión de Prophet frente a otros modelos como SARIMAX. Un MAPE bajo indica una alta fidelidad en la proyección porcentual del recaudo.")
 
     # Guardar
     output_path = OUTPUTS_REPORTS / "Reporte_Prophet_Final.pdf"

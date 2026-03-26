@@ -300,8 +300,8 @@ PROPHET
 [✅] Proyecciones 2026 generadas (12 meses)
 [✅] Intervalos de confianza (95%) aceptables
 
-SARIMA / SARIMAX
-[✅] MAPE ambos 13.99% — No contribuyó variable exógena IPC
+SARIMAX
+[✅] MAPE 13.99% — Variable exógena IPC no mejoró significativamente el error
 [⚠️] Especificación (1,1,1)(1,1,1)12 requiere re-justificación en docs
 [✅] Pronósticos generados para comparación
 
@@ -321,8 +321,7 @@ NOTEBOOKS (9 TOTAL)
 [✅] 01_EDA_Completo.ipynb — Análisis exploratorio con validaciones
 [✅] 02_Estacionalidad.ipynb — STL, ADF, KPSS, change-point detection
 [✅] 03_Correlacion_Macro.ipynb — Integración variables exógenas
-[✅] 04_SARIMAX.ipynb — Modelo SARIMA configurado
-[✅] 04_SARIMAX.ipynb — SARIMA + IPC como exógena
+[✅] 04_SARIMAX.ipynb — Modelo SARIMAX configurado con IPC como exógena
 [✅] 05_Prophet.ipynb — Facebook Prophet con festivos CO
 [✅] 06_XGBoost.ipynb — Gradient boosting (MODELO GANADOR)
 [✅] 07_LSTM.ipynb — Red neuronal recurrente
@@ -331,7 +330,7 @@ NOTEBOOKS (9 TOTAL)
 
 REPORTES (35+ ARCHIVOS)
 [✅] Comparación modelos disponible
-[✅] Métricas XGBoost, Prophet, LSTM, SARIMA, SARIMAX
+[✅] Métricas XGBoost, Prophet, LSTM, SARIMAX
 [✅] Feature importance con SHAP explicaciones
 [✅] Benchmarking territorial (4 tipologías K-Means)
 [✅] PDFs publicables generados (5 archivos)

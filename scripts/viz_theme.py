@@ -38,7 +38,7 @@ FONT_WATERMARK = {'family': FONT_FAMILY, 'size': 7, 'alpha': 0.4}
 
 # Colores principales (saturados pero elegantes)
 C_PRIMARY = '#1B2A4A'       # Azul marino profundo (datos reales)
-C_SECONDARY = '#C0392B'     # Rojo académico (SARIMA)
+C_SECONDARY = '#C0392B'     # Rojo académico (SARIMAX)
 C_TERTIARY = '#2980B9'      # Azul cielo (SARIMAX)
 C_QUATERNARY = '#27AE60'    # Verde esmeralda (Prophet)
 C_QUINARY = '#E67E22'       # Naranja cálido (XGBoost)

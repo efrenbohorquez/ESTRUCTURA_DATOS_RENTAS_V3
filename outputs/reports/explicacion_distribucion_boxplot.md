@@ -25,7 +25,7 @@ La frecuencia relativa (densidad) de los valores de recaudo mensual. Cada barra 
 - Esta distribución **no es normal** → confirma que la serie tiene estacionalidad fuerte
 
 ### Implicaciones para el Modelado
-- Los modelos que asumen normalidad (SARIMA puro) pueden subestimar los picos
+- Los modelos que asumen normalidad (SARIMAX) pueden subestimar los picos
 - Una **transformación logarítmica** podría normalizar la distribución
 - XGBoost y LSTM son más robustos a distribuciones asimétricas
 
@@ -73,7 +73,7 @@ El valor mínimo de recaudo tiende a mantenerse bajo (~$175–190MM), indicando 
 ### Recomendaciones para la Tesis
 
 1. **No eliminar outliers** — son picos estacionales predecibles, no errores
-2. **Considerar transformación logarítmica** para estabilizar la varianza antes de SARIMA
+2. **Considerar transformación logarítmica** para estabilizar la varianza antes de SARIMAX
 3. **Variables dummy para Ene/Jul** en SARIMAX y Prophet para capturar los picos
 4. **Reportar el coeficiente de variación (CV)** por año como evidencia de heterocedasticidad creciente
 

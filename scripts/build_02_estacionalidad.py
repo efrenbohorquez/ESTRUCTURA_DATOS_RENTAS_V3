@@ -508,7 +508,7 @@ print(f"  F_s log1p:      {F_s_log:.4f}")
 print()
 if necesita_log:
     print(f"  ✅ APLICAR log1p — varianza creciente detectada")
-    print(f"     Modelar con serie log-transformada para SARIMA/SARIMAX")
+    print(f"     Modelar con serie log-transformada para SARIMAX")
 else:
     print(f"  ⚠️ log1p OPCIONAL — heterocedasticidad no conclusiva")
     print(f"     Serie original es viable; log1p no mejora la estabilidad de forma significativa")""")
@@ -1133,7 +1133,7 @@ print(f"\n{'═'*70}")
 print(f"RECOMENDACIÓN PARA SARIMAX")
 print(f"{'═'*70}")
 print(f"  {rec}")
-print(f"  Orden sugerido: SARIMA(p, {d_opt}, q)(P, {D_opt}, Q)[{ESTACIONALIDAD}]")
+print(f"  Orden sugerido: SARIMAX(p, {d_opt}, q)(P, {D_opt}, Q)[{ESTACIONALIDAD}]")
 print(f"  → p, q, P, Q se determinan en notebook 04 (ACF/PACF + AIC/BIC)")""")
 
 # ════════════════════════════════════════════════════════════
@@ -1149,7 +1149,7 @@ md(r"""---
 |----------|-----------|---------------------------|
 | **CCF (Lag)** | Rezago óptimo identificado | Confirma/rechaza hipótesis Dic→Ene, Jun→Jul |
 | **STL Avanzado** | F_s cuantificado | Perfil estacional fiscal con patrón robusto cada 12 meses |
-| **Heterocedasticidad** | Evaluación log1p | Decisión sobre transformación para SARIMA |
+| **Heterocedasticidad** | Evaluación log1p | Decisión sobre transformación para SARIMAX |
 | **Licores/Cigarrillos** | Crecimiento orgánico vs inflacionario | Separación efecto volumen vs precio |
 | **Juegos de Azar** | Elasticidad ingreso cuantificada | Base para pronóstico con variables exógenas |
 | **Change Points** | Quiebres 2025 evaluados | Dummy para migración ERP si significativo |

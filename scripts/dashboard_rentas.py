@@ -59,13 +59,13 @@ st.sidebar.markdown("Ajuste los parámetros de los modelos para explorar diferen
 # Selección de Modelo
 modelo_selected = st.sidebar.selectbox(
     "Seleccione Modelo",
-    ["SARIMA", "Prophet", "XGBoost", "Comparativo"]
+    ["SARIMAX", "Prophet", "XGBoost", "Comparativo"]
 )
 
 # Parámetros por modelo
 params = {}
-if modelo_selected == "SARIMA":
-    st.sidebar.subheader("Parámetros SARIMA")
+if modelo_selected == "SARIMAX":
+    st.sidebar.subheader("Parámetros SARIMAX")
     p = st.sidebar.slider("p (AR)", 0, 5, 1)
     d = st.sidebar.slider("d (I)", 0, 2, 1)
     q = st.sidebar.slider("q (MA)", 0, 5, 1)
@@ -116,7 +116,7 @@ try:
         st.subheader(f"Evolución y Pronóstico - {modelo_selected}")
         
         with st.spinner(f"Entrenando {modelo_selected}..."):
-            if modelo_selected == "SARIMA":
+            if modelo_selected == "SARIMAX":
                 y_hat, conf_int = model_helpers.entrenar_predict_sarima(df_filtered[COL_VALOR], params['order'], params['seasonal_order'], steps=horizonte)
             elif modelo_selected == "Prophet":
                 y_hat, conf_int = model_helpers.entrenar_predict_prophet(df_filtered, COL_VALOR, params['changepoint_prior_scale'], steps=horizonte)
@@ -142,11 +142,11 @@ try:
         
         # Intervalos de confianza (si existen)
         if conf_int is not None:
-            # Manejar diferentes formatos de conf_int (SARIMA vs Prophet)
+            # Manejar diferentes formatos de conf_int (SARIMAX vs Prophet)
             if isinstance(conf_int, pd.DataFrame):
                 lower = conf_int.iloc[:, 0]
                 upper = conf_int.iloc[:, 1]
-            else: # SARIMA
+            else: # SARIMAXX
                 lower = conf_int.iloc[:, 0]
                 upper = conf_int.iloc[:, 1]
                 

@@ -40,7 +40,7 @@ La amplitud de las oscilaciones **aumenta con el tiempo**:
 - 2022: Picos de ~$300MM, valles de ~$180MM (amplitud ~$120MM)
 - 2025: Picos de ~$470MM, valles de ~$210MM (amplitud ~$260MM)
 
-Esto indica **heterocedasticidad** — la varianza no es constante. Es importante para el modelado: los modelos SARIMA asumen varianza constante, mientras que LSTM y XGBoost son más robustos a este efecto.
+Esto indica **heterocedasticidad** — la varianza no es constante. Es importante para el modelado: los modelos SARIMAX asumen varianza constante, mientras que LSTM y XGBoost son más robustos a este efecto.
 
 ---
 
@@ -71,9 +71,9 @@ La tendencia roja (MA-6) también desciende al final porque:
 
 | Hallazgo | Implicación |
 |---|---|
-| Estacionalidad s=12 confirmada | Usar SARIMA con componente estacional $(P,D,Q)_{12}$ |
+| Estacionalidad s=12 confirmada | Usar SARIMAX con componente estacional $(P,D,Q)_{12}$ |
 | Tendencia creciente | La serie NO es estacionaria en nivel → requiere diferenciación (d≥1) |
-| Heterocedasticidad | Considerar transformación logarítmica para SARIMA; XGBoost y LSTM la manejan naturalmente |
+| Heterocedasticidad | Considerar transformación logarítmica para SARIMAX; XGBoost y LSTM la manejan naturalmente |
 | Picos Ene/Jul | Incluir como variables dummy o festivos en Prophet/SARIMAX |
 | Caída final es estacional | **NO alarmar** — es el comportamiento esperado. Validar que los datos del último mes estén completos |
 

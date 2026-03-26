@@ -1203,7 +1203,7 @@ md(r"""---
    (IPC, SMLV, UPC, Consumo_Hogares) permite que XGBoost capture tanto
    la inercia temporal como los factores exógenos del recaudo.
 
-3. **Transformación log1p:** Consistente con SARIMA y Prophet, estabiliza
+3. **Transformación log1p:** Consistente con SARIMAX y Prophet, estabiliza
    la varianza y permite que el modelo trate proporcionalmente los picos
    de Ene/Jul (perfil estacional fiscal).
 
