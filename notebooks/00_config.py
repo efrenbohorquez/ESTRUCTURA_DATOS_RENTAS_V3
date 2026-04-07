@@ -1,4 +1,4 @@
-﻿# pyright: reportUnusedImport=false
+# pyright: reportUnusedImport=false
 # pylint: disable=unused-import,invalid-name
 # ruff: noqa: F401
 """

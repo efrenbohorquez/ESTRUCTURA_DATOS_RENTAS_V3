@@ -1,0 +1,3 @@
+Modelo,Tipo,Parametros,Entrenamiento,MAPE_OOS,RMSE_MM,MAE_MM
+Chronos-T5-base,Foundation (Amazon),200M,Zero-shot (pre-entrenado),8.12,31.3,24.0
+Ensemble (Foundation + XGBoost),Ensemble ponderado,2 modelos,Pesos por inverse-MAPE,1.06,3.5,2.9

@@ -21,9 +21,12 @@ try:
     import model_helpers
     # Cargar 00_config usando exec para que las variables estén en el namespace global si es necesario
     config_path = NOTEBOOKS / "00_config.py"
-    with open(config_path, encoding='utf-8') as f:
-        exec(f.read(), globals())
-except ImportError as e:
+    config_globals = dict(globals())
+    config_globals['__file__'] = str(config_path)
+    with open(config_path, encoding='utf-8-sig') as f:
+        exec(f.read(), config_globals)
+    globals().update(config_globals)
+except Exception as e:
     st.error(f"Error cargando módulos: {e}")
 
 # Configuración de página Streamlit

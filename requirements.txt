@@ -24,6 +24,11 @@ tensorflow>=2.15  # Requiere Python <= 3.11
 # Tuning
 optuna>=3.4
 
+# Foundation Models — Series de Tiempo
+chronos-forecasting>=1.3
+timesfm>=2.0
+torch>=2.2
+
 # Jupyter
 jupyter>=1.0
 nbconvert>=7.0

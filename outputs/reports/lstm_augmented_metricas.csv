@@ -1,0 +1,2 @@
+Modelo,Serie_Aumentada_Meses,Backcast_Meses,Muestras_Entrenamiento,Look_Back,Epocas_Entrenadas,Mejor_Epoca,Parametros_Red,MAPE_pct,RMSE_MM_COP,MAE_MM_COP,MAE_Rel_pct,MAPE_Original,Mejora_MAPE_pp
+LSTM_Aumentado,87,36,71,12,122,92,31905,23.45,72.1,59.8,21.7,23.52,0.07
