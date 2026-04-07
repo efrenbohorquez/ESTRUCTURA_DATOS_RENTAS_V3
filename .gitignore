@@ -54,3 +54,6 @@ desktop.ini
 
 # ── Logs ──
 *.log
+
+# Excepcion: dataset base necesario para el dashboard
+!data/raw/BaseRentasCedidasVF.xlsx
